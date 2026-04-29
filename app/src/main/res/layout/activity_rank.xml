@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 根容器用 FrameLayout，让背景图和内容叠加 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景图：bg2.jpg 放在 res/drawable/ 目录下 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg2"
+        android:scaleType="centerCrop"
+        android:contentDescription="background"/>
+
+    <!-- 半透明遮罩，让文字更清晰 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"/>
+
+    <!-- 实际内容 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_title"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 难度选择 + 在线/本地切换 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_label"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_difficulty"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:entries="@array/difficulty_names"
+                android:spinnerMode="dropdown"
+                android:minHeight="48dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_rank_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/global_rank_title"
+                android:textColor="@android:color/white"
+                android:theme="@style/Theme.AppCompat.Light"/>
+        </LinearLayout>
+
+        <!-- 排行榜列表（ListView 背景透明，显示卡片效果） -->
+        <ListView
+            android:id="@+id/lv_rank"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="200dp"
+            android:text="@string/back"
+            android:textSize="18sp"
+            android:backgroundTint="#1565C0"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

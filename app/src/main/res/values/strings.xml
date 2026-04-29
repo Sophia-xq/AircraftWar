@@ -1,0 +1,22 @@
+
+<resources>
+    <string name="global_rank_title">全球榜单</string>
+<string name="app_name">AircraftWar</string>
+<string name="difficulty_title">选择难度</string>
+<string name="easy_mode">简单模式</string>
+<string name="normal_mode">普通模式</string>
+<string name="hard_mode">困难模式</string>
+    <string name="music_sound_label">音乐音效</string>
+    <string name="rank_title">排行榜</string>
+    <string name="back">返回</string>
+    <string name="delete">删除</string>
+    <string name="delete_record">删除此条记录</string>
+    <string-array name="difficulty_names">
+        <item>简单模式</item>
+        <item>普通模式</item>
+        <item>困难模式</item>
+    </string-array>
+    <string name="difficulty_label">难度：</string>
+
+
+</resources>

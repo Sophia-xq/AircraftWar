@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    android:padding="16dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="匹配大厅"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 昵称 + 房间名输入区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/et_player_name_lobby"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="你的昵称"
+            android:textColor="@android:color/white"
+            android:textColorHint="#888888"
+            android:backgroundTint="#444444"
+            android:paddingStart="8dp"
+            android:inputType="text"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/et_room_name"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="房间名"
+            android:textColor="@android:color/white"
+            android:textColorHint="#888888"
+            android:backgroundTint="#444444"
+            android:paddingStart="8dp"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <!-- 按钮行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btn_create_room"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="创建房间"
+            android:textSize="15sp"
+            android:backgroundTint="#FF6600"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btn_refresh_rooms"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="刷新列表"
+            android:textSize="15sp"
+            android:backgroundTint="#1565C0"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btn_back_lobby"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="返回"
+            android:textSize="15sp"
+            android:backgroundTint="#444444"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- 状态提示 -->
+    <TextView
+        android:id="@+id/tv_lobby_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击「刷新列表」查看可加入的房间"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 列表标题行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#222222"
+        android:padding="8dp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="房间名"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="房主"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <!-- 房间列表 -->
+    <ListView
+        android:id="@+id/lv_rooms"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#333333"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

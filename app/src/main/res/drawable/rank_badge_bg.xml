@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/rank_badge_bg.xml -->
+<!-- 排名徽章背景：圆形，颜色由 RankAdapter 动态设置 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#444444"/>
+    <!-- 颜色在 RankAdapter 中根据名次动态修改 -->
+</shape>
